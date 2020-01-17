@@ -11,9 +11,6 @@ var question3answered = false;
 var question4answered = false;
 var question5answered = false;
 
-
-//thank you to w3schools.com for the info on the do/while statement
-
 do {
   var questionOne = prompt('Ok ' + username + ', if that IS your real name, my favorite color is blue right?');
 

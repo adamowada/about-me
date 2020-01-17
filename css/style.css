@@ -1,0 +1,44 @@
+.arrow {
+  float: right;
+  font-weight: bold;
+}
+
+ul {
+  background-color: lightblue;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 1em;
+  list-style-type: square;
+  list-style-position: inside;
+  font-size: 16px;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+h1 {
+  margin: 50px;
+  padding: 1.5em;
+  background-color: darkblue;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-decoration: wavy;
+}
+
+p {
+  text-indent: 25px;
+  background-color: lightblue;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 1em;
+  font-size: 16px;
+}

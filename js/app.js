@@ -101,35 +101,39 @@ fifthQuestion();
 
 var numberTries = 4;
 var hiddenNumber = Math.floor(Math.random() * 25) + 1;
-do{
-  var questionSix = Number(prompt('Ok ' + username + ' you did so well on questions about me, let\'s see how good your guessing game is. Guess a number between 1 - 25. Tell you what. I\'ll give you 4 tries at it with hints! You have ' + numberTries + ' tries left.'));
-  if(questionSix > 25 || questionSix < 1 || isNaN(questionSix) === true){
-    numberTries --;
-    if(numberTries < 1) {
-      alert('Sorry ' + username + ', you lost. My number was ' + hiddenNumber + '. Better luck on the last question.');
-      break;
+
+function sixthQuestion() {
+  do{
+    var questionSix = Number(prompt('Ok ' + username + ' you did so well on questions about me, let\'s see how good your guessing game is. Guess a number between 1 - 25. Tell you what. I\'ll give you 4 tries at it with hints! You have ' + numberTries + ' tries left.'));
+    if(questionSix > 25 || questionSix < 1 || isNaN(questionSix) === true){
+      numberTries --;
+      if(numberTries < 1) {
+        alert('Sorry ' + username + ', you lost. My number was ' + hiddenNumber + '. Better luck on the last question.');
+        break;
+      }
+      alert('Please make sure you are guessing a whole number between 1 - 25. Try again! You have ' + numberTries + ' guesses left.');
+    }else if(questionSix < hiddenNumber){
+      numberTries --;
+      if(numberTries < 1){
+        alert('Sorry ' + username + ', you lost. My number was ' + hiddenNumber + '. Better luck on the last question.');
+        break;
+      }
+      alert('Too low! You have ' + numberTries + ' more tries.');
+    }else if(questionSix > hiddenNumber){
+      numberTries --;
+      if (numberTries < 1) {
+        alert('Sorry ' + username + ', you lost. My number was ' + hiddenNumber + '. Better luck on the last question.');
+        break;
+      }
+      alert('Too high! You have ' + numberTries + ' more tries.');
+    }else if(questionSix === hiddenNumber){
+      question6answered = true;
+      numberCorrect ++;
+      alert('Congrats! Yes it was ' + hiddenNumber + '! Move onto the last question.');
     }
-    alert('Please make sure you are guessing a whole number between 1 - 25. Try again! You have ' + numberTries + ' guesses left.');
-  }else if(questionSix < hiddenNumber){
-    numberTries --;
-    if(numberTries < 1){
-      alert('Sorry ' + username + ', you lost. My number was ' + hiddenNumber + '. Better luck on the last question.');
-      break;
-    }
-    alert('Too low! You have ' + numberTries + ' more tries.');
-  }else if(questionSix > hiddenNumber){
-    numberTries --;
-    if (numberTries < 1) {
-      alert('Sorry ' + username + ', you lost. My number was ' + hiddenNumber + '. Better luck on the last question.');
-      break;
-    }
-    alert('Too high! You have ' + numberTries + ' more tries.');
-  }else if(questionSix === hiddenNumber){
-    question6answered = true;
-    numberCorrect ++;
-    alert('Congrats! Yes it was ' + hiddenNumber + '! Move onto the last question.');
-  }
-}while (question6answered === false);
+  }while (question6answered === false);
+}
+sixthQuestion();
 
 var placeTries = 6;
 var places = ['hawaii', 'japan', 'mexico', 'italy'];

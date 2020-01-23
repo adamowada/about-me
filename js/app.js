@@ -47,19 +47,22 @@ function secondQuestion() {
 }
 secondQuestion();
 
-do{
-  var questionThree = prompt('How about television shows. You\'re (probably) human, you know what a tv is I don\'t need to explain it to you MY favorite show of all time is The Office right?');
-  if(questionThree.toLowerCase() === 'no' || questionThree.toLowerCase() === 'n'){
-    numberCorrect += 1;
-    alert('That\'s right! It\'s not! Because I don\'t HAVE a favorite tv show and even though the hit tv show The Office is really good it\'s not my "favorite". But ' + username + ' you knew that already. Go on to question 4 you rock star you.');
-    question3answered = true;
-  }else if(questionThree.toLowerCase() === 'yes' || questionThree.toLowerCase() === 'y'){
-    alert('Wrong. Trick question I don\'t have a favorite tv show. Got-chaaaa.');
-    question3answered = true;
-  }else{
-    alert('Hello "' + username + '" this is a "yes" or "no" quiz only. This means that you need to type "y" or "yes" for yes, and likewise "n" or "no" for no. Unfortunately I cannot accept any other answer from you. Luckily you can try again!');
-  }
-}while (question3answered === false);
+function thirdQuestion() {
+  do{
+    var questionThree = prompt('How about television shows. You\'re (probably) human, you know what a tv is I don\'t need to explain it to you MY favorite show of all time is The Office right?');
+    if(questionThree.toLowerCase() === 'no' || questionThree.toLowerCase() === 'n'){
+      numberCorrect += 1;
+      alert('That\'s right! It\'s not! Because I don\'t HAVE a favorite tv show and even though the hit tv show The Office is really good it\'s not my "favorite". But ' + username + ' you knew that already. Go on to question 4 you rock star you.');
+      question3answered = true;
+    }else if(questionThree.toLowerCase() === 'yes' || questionThree.toLowerCase() === 'y'){
+      alert('Wrong. Trick question I don\'t have a favorite tv show. Got-chaaaa.');
+      question3answered = true;
+    }else{
+      alert('Hello "' + username + '" this is a "yes" or "no" quiz only. This means that you need to type "y" or "yes" for yes, and likewise "n" or "no" for no. Unfortunately I cannot accept any other answer from you. Luckily you can try again!');
+    }
+  }while (question3answered === false);
+}
+thirdQuestion();
 
 do{
   var questionFour = prompt('I can see you\'re still here. My birthday is in July, correct?');

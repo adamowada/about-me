@@ -82,19 +82,22 @@ function fourthQuestion() {
 }
 fourthQuestion();
 
-do{
-  var questionFive = prompt('Hey ' + username + ', thanks a lot for taking this quiz. I have just a few more questions for you. I nearly failed calculus in senior year in high school didn\'t I?');
-  if(questionFive.toLowerCase() === 'yes' || questionFive.toLowerCase() === 'y'){
-    numberCorrect += 1;
-    alert('Yes!! It was the worst. I had to come early to school for months to make up all the extra work. You know, I\'m happy you got this question right, even though I promised no calculus would be involved at the beginning of this quiz. Good job!');
-    question5answered = true;
-  }else if(questionFive.toLowerCase() === 'no' || questionFive.toLowerCase() === 'n'){
-    alert('Fell for the surprise calculus question huh ' + username + '? Thought yes or no questions wouldn\'t need calculus to solve them did you? Don\'t worry you are still cool and a good sport. Better luck next time!');
-    question5answered = true;
-  }else{
-    alert(username + ', ' + username + ', ' + username + '.  Kindly try again with a "yes" or "no" response. See, truth be told, one day I\'ll be able to code in the ability to accept more varied types of responses but for now play along ok? Thanks, it\'s almost the last question and I know you\'ve been very patient.');
-  }
-}while (question5answered === false);
+function fifthQuestion() {
+  do{
+    var questionFive = prompt('Hey ' + username + ', thanks a lot for taking this quiz. I have just a few more questions for you. I nearly failed calculus in senior year in high school didn\'t I?');
+    if(questionFive.toLowerCase() === 'yes' || questionFive.toLowerCase() === 'y'){
+      numberCorrect += 1;
+      alert('Yes!! It was the worst. I had to come early to school for months to make up all the extra work. You know, I\'m happy you got this question right, even though I promised no calculus would be involved at the beginning of this quiz. Good job!');
+      question5answered = true;
+    }else if(questionFive.toLowerCase() === 'no' || questionFive.toLowerCase() === 'n'){
+      alert('Fell for the surprise calculus question huh ' + username + '? Thought yes or no questions wouldn\'t need calculus to solve them did you? Don\'t worry you are still cool and a good sport. Better luck next time!');
+      question5answered = true;
+    }else{
+      alert(username + ', ' + username + ', ' + username + '.  Kindly try again with a "yes" or "no" response. See, truth be told, one day I\'ll be able to code in the ability to accept more varied types of responses but for now play along ok? Thanks, it\'s almost the last question and I know you\'ve been very patient.');
+    }
+  }while (question5answered === false);
+}
+fifthQuestion();
 
 var numberTries = 4;
 var hiddenNumber = Math.floor(Math.random() * 25) + 1;

@@ -64,19 +64,23 @@ function thirdQuestion() {
 }
 thirdQuestion();
 
-do{
-  var questionFour = prompt('I can see you\'re still here. My birthday is in July, correct?');
-  if(questionFour.toLowerCase() === 'no' || questionFour.toLowerCase() === 'n'){
-    numberCorrect += 1;
-    alert('Yea it\'s not in July, it\'s in June. How come you know me so well? The not final question awaits you, ' + username + '!');
-    question4answered = true;
-  }else if(questionFour.toLowerCase() === 'yes' || questionFour.toLowerCase() === 'y'){
-    alert('OMG. Is THIS why you missed my birthday party last year????? You thought it was in July!? ' + username + ' you silly goose!! I was born in June! You\'d better remember this year. That\'s all I\'m saying.');
-    question4answered = true;
-  }else{
-    alert('ERROR ERROR ERROR *beep boop* DOES NOT COMPUTE PLEASE TRY AGAIN. THANK YOU FOR YOUR COOPERATION.');
-  }
-}while (question4answered === false);
+
+function fourthQuestion() {
+  do{
+    var questionFour = prompt('I can see you\'re still here. My birthday is in July, correct?');
+    if(questionFour.toLowerCase() === 'no' || questionFour.toLowerCase() === 'n'){
+      numberCorrect += 1;
+      alert('Yea it\'s not in July, it\'s in June. How come you know me so well? The not final question awaits you, ' + username + '!');
+      question4answered = true;
+    }else if(questionFour.toLowerCase() === 'yes' || questionFour.toLowerCase() === 'y'){
+      alert('OMG. Is THIS why you missed my birthday party last year????? You thought it was in July!? ' + username + ' you silly goose!! I was born in June! You\'d better remember this year. That\'s all I\'m saying.');
+      question4answered = true;
+    }else{
+      alert('ERROR ERROR ERROR *beep boop* DOES NOT COMPUTE PLEASE TRY AGAIN. THANK YOU FOR YOUR COOPERATION.');
+    }
+  }while (question4answered === false);
+}
+fourthQuestion();
 
 do{
   var questionFive = prompt('Hey ' + username + ', thanks a lot for taking this quiz. I have just a few more questions for you. I nearly failed calculus in senior year in high school didn\'t I?');

@@ -15,3 +15,6 @@ thank you to w3schools at https://www.w3schools.com/js/js_type_conversion.asp fo
 vscode recommended isNaN that I used in problem 6 
 
 thank you to w3schools at https://www.w3schools.com/js/js_random.asp for help with random integer for question 6 
+
+the driver was Natalie Sinner for adding functions to questions 1 through 7 
+the navigator was Adam Owada for adding functions to questions 1 through 7

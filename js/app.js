@@ -30,19 +30,22 @@ function firstQuestion() {
 }
 firstQuestion();
 
-do{
-  var questionTwo = prompt('So you survived the first question have you... I see... well this one is a doozy. Quick! My dog\'s name is Alfred Chester Wilhelm II correct?');
-  if(questionTwo.toLowerCase() === 'no' || questionTwo.toLowerCase() === 'n'){
-    numberCorrect ++;
-    alert('Darn skippy. What kind of made up name is that? Eh try your luck on question 3.');
-    question2answered = true;
-  }else if (questionTwo.toLowerCase() === 'yes' || questionTwo.toLowerCase() === 'y'){
-    alert('Bahahahaha ' + username + ' you have have some sense of humor. I like you.');
-    question2answered = true;
-  }else{
-    alert('*facepalm* ' + username + ' I can trust you to answer a yes or no question can\'t I? Try question 2 again!');
-  }
-}while (question2answered === false);
+function secondQuestion() {
+  do{
+    var questionTwo = prompt('So you survived the first question have you... I see... well this one is a doozy. Quick! My dog\'s name is Alfred Chester Wilhelm II correct?');
+    if(questionTwo.toLowerCase() === 'no' || questionTwo.toLowerCase() === 'n'){
+      numberCorrect ++;
+      alert('Darn skippy. What kind of made up name is that? Eh try your luck on question 3.');
+      question2answered = true;
+    }else if (questionTwo.toLowerCase() === 'yes' || questionTwo.toLowerCase() === 'y'){
+      alert('Bahahahaha ' + username + ' you have have some sense of humor. I like you.');
+      question2answered = true;
+    }else{
+      alert('*facepalm* ' + username + ' I can trust you to answer a yes or no question can\'t I? Try question 2 again!');
+    }
+  }while (question2answered === false);
+}
+secondQuestion();
 
 do{
   var questionThree = prompt('How about television shows. You\'re (probably) human, you know what a tv is I don\'t need to explain it to you MY favorite show of all time is The Office right?');

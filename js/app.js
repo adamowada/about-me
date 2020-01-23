@@ -137,20 +137,24 @@ sixthQuestion();
 
 var placeTries = 6;
 var places = ['hawaii', 'japan', 'mexico', 'italy'];
-do{
-  var questionSeven = prompt('Final question ' + username + '! Guess one place that I\'ve travelled to out of the following list: Hawaii, Chicago, Japan, Mexico, Italy, Spain, London, Toronto, France, Ireland, and Iceland. You have ' + placeTries + ' guesses left.');
-  if(places.includes(questionSeven.toLowerCase())){
-    numberCorrect ++;
-    question7answered = true;
-    alert('Correct! I have been to ' + questionSeven.charAt(0).toUpperCase() + questionSeven.substring(1).toLowerCase() + ' before. Good job ' + username + ' and thanks for playing!');
-  }else{
-    placeTries --;
-    if(placeTries < 1){
-      alert('Sorry ' + username + ' but the only places I\'ve been to is Hawaii, Japan, Mexico, and Italy. Someday I\'ll visit the others. Thanks for playing!');
-      break;
+
+function seventhQuestion() {
+  do{
+    var questionSeven = prompt('Final question ' + username + '! Guess one place that I\'ve travelled to out of the following list: Hawaii, Chicago, Japan, Mexico, Italy, Spain, London, Toronto, France, Ireland, and Iceland. You have ' + placeTries + ' guesses left.');
+    if(places.includes(questionSeven.toLowerCase())){
+      numberCorrect ++;
+      question7answered = true;
+      alert('Correct! I have been to ' + questionSeven.charAt(0).toUpperCase() + questionSeven.substring(1).toLowerCase() + ' before. Good job ' + username + ' and thanks for playing!');
+    }else{
+      placeTries --;
+      if(placeTries < 1){
+        alert('Sorry ' + username + ' but the only places I\'ve been to is Hawaii, Japan, Mexico, and Italy. Someday I\'ll visit the others. Thanks for playing!');
+        break;
+      }
+      alert('Sorry ' + username + '. I\'ve never been to ' + questionSeven.charAt(0).toUpperCase() + questionSeven.substring(1).toLowerCase() + '. Tell you what, I\'ll give you ' + placeTries + ' more guesses.');
     }
-    alert('Sorry ' + username + '. I\'ve never been to ' + questionSeven.charAt(0).toUpperCase() + questionSeven.substring(1).toLowerCase() + '. Tell you what, I\'ll give you ' + placeTries + ' more guesses.');
-  }
-}while(question7answered === false);
+  }while(question7answered === false);
+}
+seventhQuestion();
 
 alert('Wow ' + username + ' you got ' + numberCorrect + ' out of 7 questions right!!');

@@ -13,19 +13,22 @@ var question5answered = false;
 var question6answered = false;
 var question7answered = false;
 
-do{
-  var questionOne = prompt('Ok ' + username + ', if that IS your real name, my favorite color is blue right?');
-  if(questionOne.toLowerCase() === 'yes' || questionOne.toLowerCase() === 'y'){
-    numberCorrect ++;
-    alert('Good job, very well done, and all of that jazz. On to question 2!');
-    question1answered = true;
-  }else if(questionOne.toLowerCase() === 'no' || questionOne.toLowerCase() === 'n'){
-    alert('Well you don\'t know me at all and if you really ARE ' + username + ' you\'d know my favorite color is blue.');
-    question1answered = true;
-  }else{
-    alert('Hey uh.... ' + username + ' right?? I couldn\'t understand you there, why don\'t you try again with a "yes" or "no" kind of response.');
-  }
-}while (question1answered === false);
+function firstQuestion() {
+  do{
+    var questionOne = prompt('Ok ' + username + ', if that IS your real name, my favorite color is blue right?');
+    if(questionOne.toLowerCase() === 'yes' || questionOne.toLowerCase() === 'y'){
+      numberCorrect ++;
+      alert('Good job, very well done, and all of that jazz. On to question 2!');
+      question1answered = true;
+    }else if(questionOne.toLowerCase() === 'no' || questionOne.toLowerCase() === 'n'){
+      alert('Well you don\'t know me at all and if you really ARE ' + username + ' you\'d know my favorite color is blue.');
+      question1answered = true;
+    }else{
+      alert('Hey uh.... ' + username + ' right?? I couldn\'t understand you there, why don\'t you try again with a "yes" or "no" kind of response.');
+    }
+  }while (question1answered === false);
+}
+firstQuestion();
 
 do{
   var questionTwo = prompt('So you survived the first question have you... I see... well this one is a doozy. Quick! My dog\'s name is Alfred Chester Wilhelm II correct?');

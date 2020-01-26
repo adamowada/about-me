@@ -11,8 +11,20 @@ ul {
   margin-bottom: 1em;
   list-style-type: square;
   list-style-position: inside;
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px;
+  line-height: 1em;
+  border: 3px dashed green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+li {
+  margin: 10px;
+  text-indent: 15px;
+}
+
+li.main:first-letter {
+font-size: 150%;
 }
 
 ol {
@@ -22,8 +34,10 @@ ol {
   margin-top: 1em;
   margin-bottom: 1em;
   counter-reset: item;
-  font-size: 16px;
+  font-size: 18px;
   padding: 10px;
+  border: 3px dashed green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .oli::before {
@@ -37,11 +51,14 @@ main {
 
 h1 {
   margin: 50px;
-  padding: 1.5em;
+  padding: 20px;
+  padding-bottom: 50px;
   background-color: darkblue;
   color: white;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
+  text-align: left;
+  text-shadow: 3px 3px 3px white;
 }
 
 h2 {
@@ -49,6 +66,9 @@ h2 {
   font-weight: bold;
   margin-left: 50px;
   margin-right: 50px;
+  border: 3px solid darkgrey;
+  padding: 10px;
+  text-shadow: 3px 3px 3px blueviolet;
 }
 
 p {
@@ -58,4 +78,8 @@ p {
   margin-right: 50px;
   margin-bottom: 1em;
   font-size: 16px;
+}
+
+img {
+  margin-right: 20px;
 }

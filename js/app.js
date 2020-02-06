@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 var username = prompt('Helllloooooooooo User! What\'s your name?');
 
 alert('Hi ' + username + ' thanks for coming to my About Me webpage. I have a short 7 question quiz for you to test if you really know me! Don\'t worry it\'s pretty easy. No calculus involved.');
@@ -158,4 +158,3 @@ function seventhQuestion() {
 seventhQuestion();
 
 alert('Wow ' + username + ' you got ' + numberCorrect + ' out of 7 questions right!!');
-*/
